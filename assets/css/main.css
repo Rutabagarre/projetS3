@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Roboto, sans-serif;
+}
+a, a:link, a:visited, a:active{
+    text-decoration: none;
+}
+a:hover{
+    color: grey;
+}
+li{
+    list-style: none;
+}
+.voir-plus{
+    float: right;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+/** NavBar **/
+nav{
+    padding: 2% 4%;
+    font-size: 1.5rem;
+}
+.lien{
+    margin-right: 20px;
+    color: black;
+}
+.droite{
+    float: right;
+}
+.rouge{
+    padding: 8px;
+}
+.rouge:hover{
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+}
+/** Home Page **/
+#home-page{
+    padding: 0 4%;
+}
+#home-page-title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 0 2% 0;
+}
+#home-page section{
+    display: flex;
+    justify-content: space-around;
+    padding: 2% 0;
+}
+.home-album{
+    padding: 1%;
+    background-color: #DCDCDC;
+    border-radius: 2%;
+}
+.home-album img{
+    width: 450px;
+    height: 450px;
+}
+.home-album h2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/** Album Page **/
+#albums-page{
+    padding: 0 4%;
+}
+#albums-page-title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 0 2% 0;
+}
+#albums-page section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 4% 0;
+}
+.albums-page-album{
+    padding: 1%;
+    margin-bottom: 2%;
+    background-color: #DCDCDC;
+    border-radius: 2%;
+}
+.albums-page-album img{
+    width: 450px;
+    height: 450px;
+}
+.albums-page-album h2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+/** Admin Page **/
+#admin-page h1{
+    text-align: center;
+}
+#admin-page-boutons{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15.2% 10%;
+}
+#admin-page-boutons a{
+    background-color: #DCDCDC;
+    border-radius: 2%;
+    padding: 1%;
+    color: black;
+}
+
+/** Ajouter un album **/
+#add-album-page{
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#add-album-page-title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 0 2% 0;
+}
+#add-album-page form{
+    padding: 8.4% 0;
+}
+#add-album-page input{
+    padding: 2%;
+    border: solid #DCDCDC 1px;
+    border-radius: 2%;
+}
+.form-element{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+#add-album-page-envoyer{
+    float: right;
+    border-radius: 5%;
+}
+/** Supprimer un album **/
+#delete-album-page{
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#delete-album-page-title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 0 2% 0;
+}
+#delete-album-page form{
+    padding: 13% 0;
+}
+#delete-album-page input{
+    padding: 2%;
+    border: solid #DCDCDC 1px;
+    border-radius: 2%;
+}
+#delete-album-page-envoyer{
+    float: right;
+    border-radius: 5%;
+}
+/** Login Page **/
+#login-page{
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#login-page-title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 0 2% 0;
+}
+#login-page form{
+    padding: 12.5% 0;
+}
+#login-page input{
+    padding: 2%;
+    border: solid #DCDCDC 1px;
+    border-radius: 2%;
+}
+#login-page-envoyer{
+    float: right;
+    border-radius: 5%;
+}
+
+/** Register page **/
+#register-page{
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#register-page-title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 0 2% 0;
+}
+#register-page form{
+    padding: 9.8% 0;
+}
+#register-page input{
+    padding: 2%;
+    border: solid #DCDCDC 1px;
+    border-radius: 2%;
+}
+#register-page-envoyer{
+    float: right;
+    border-radius: 5%;
+}
+
+/** Users page **/
+#users-page{
+    padding: 6.8% 4%;
+}
+#users-page-title{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0 0 2% 0;
+}
+#users-page section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 5% 0;
+}
+.user-card{
+    width: 25%;
+    margin: 1%;
+    padding: 1%;
+    background-color: #DCDCDC;
+    border-radius: 5px;
+}
+
+/** Error **/
+#error-page{
+    padding: 4%;
+    text-align: center;
+}
+
+/** One album **/
+#album-page{
+    padding: 4%;
+}
+#album-page-header{
+    display: flex;
+    justify-content: space-around;
+}
+#album-page-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#album-page img {
+    width: 300px;
+    height: 300px;
+}
+#album-page iframe{
+    width: 800px;
+}
+.btn-reserver{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    margin-top: 100px;
+    width: 120px;
+    text-align: center;
+}
+
+/** Playlist **/
+#playlist-page{
+    padding: 4%;
+}
+#playlist-page-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+/** Footer **/
+footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
+    background-color: #DCDCDC;
+}
