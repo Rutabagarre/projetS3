@@ -97,4 +97,14 @@ class AlbumModel extends BDD {
 
         return $albums;
     }
+
+    public function stats() {
+        $sql = 'SELECT COUNT(*) as count FROM albums';
+        $req = $this->pdo->prepare($sql);
+        $req->execute();
+
+        $row = $req->fetch(PDO::FETCH_ASSOC);
+
+        return $row['count'];
+    }
 }

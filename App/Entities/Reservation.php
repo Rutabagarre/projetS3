@@ -1,6 +1,6 @@
 <?php
 
-class Reservations
+class Reservation
 {
     public $id_resa;
     private $id_resa_album;

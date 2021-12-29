@@ -1,7 +1,7 @@
 <nav>
 <!-- Pages -->
     <a class="lien gauche" href="<?= HOST ?>index.php?page=home"><i class="fas fa-home"></i> Accueil</a>
-    <a class="lien gauche" href="<?= HOST ?>index.php?page=viewAlbum"><i class="fas fa-compact-disc"></i> Albums</a>
+    <a class="lien gauche" href="<?= HOST ?>index.php?page=allAlbums"><i class="fas fa-compact-disc"></i> Albums</a>
     <a class="lien gauche" href="<?= HOST ?>index.php?page=playlist"><i class="fas fa-music"></i> Playlist</a>
     <?php if (!empty($_SESSION['user'])) { ?>
         <a class="lien gauche" href="<?= HOST ?>index.php?page=panier"><i class="fas fa-shopping-cart"></i> Panier</a>

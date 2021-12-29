@@ -32,6 +32,8 @@ extract($data);
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
         </div>
-
-        <input type="submit" value="Inscription" id="register-page-envoyer">
+        <div class="valid">
+            <a href="<?= HOST ?>index.php?page=login">Déjà un compte ? Connectez-vous</a>
+            <input type="submit" value="Inscription" id="register-page-envoyer">
+        </div>
 </div>

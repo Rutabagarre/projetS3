@@ -78,4 +78,14 @@ class UserModel extends BDD
         $req->bindParam(':hash', $hash);
         return $req->execute();
     }
+
+    public function stats() {
+        $sql = 'SELECT COUNT(*) as count FROM users';
+        $req = $this->pdo->prepare($sql);
+        $req->execute();
+
+        $row = $req->fetch(PDO::FETCH_ASSOC);
+
+        return $row['count'];
+    }
 }

@@ -18,6 +18,9 @@
             <label for="password">Password</label>
             <input type="password" name="password" id="password">
         </div>
-        <input type="submit" value="Se connecter" id="login-page-envoyer">
+        <div class="valid">
+            <a href="<?= HOST ?>index.php?page=register">Pas encore inscrit ? Inscrivez-vous</a>
+            <input type="submit" value="Se connecter" id="login-page-envoyer">
+        </div>
     </form>
 </div>

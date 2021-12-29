@@ -97,8 +97,10 @@ class Admin {
                     ) {
                         $nom = htmlspecialchars(trim($_POST['nom']));
                         $artiste = htmlspecialchars(trim($_POST['artiste']));
+                        $path_img = str_replace(' ', '_', $nom);
 
                         $albumModel->delete($nom, $artiste);
+                        unlink("images/albumsPochette/".$path_img.".jpeg");
                     } else {
                         $errors['empty'] = "Merci de remplir tout les champs";
                     }
@@ -117,17 +119,49 @@ class Admin {
         ]);
     }
 
-    function findAllUsers($params) {
-        $view = new View('findAllUsers');
+    function adminUsers($params) {
+        $view = new View('adminUsers');
 
-        $albumModel = new UserModel();
+        $userModel = new UserModel();
         $errors = [];
 
-        $users = $albumModel->findAll();
+        $users = $userModel->findAll();
 
         $view->render([
             'errors' => $errors,
             'users' => $users
+        ]);
+    }
+
+    function adminResas() {
+        $view = new View('adminResas');
+
+        $resaModel = new ReservationsModel();
+        $errors = [];
+
+        $reservations = $resaModel->findAllReservations();
+        $view->render([
+            'errors' => $errors,
+            'reservations' => $reservations
+        ]);
+    }
+
+    function adminStats() {
+        $view = new View('adminStats');
+        $resaModel = new ReservationsModel();
+        $albumModel = new AlbumModel();
+        $userModel = new UserModel();
+        $errors = [];
+
+        $reservationsStats = $resaModel->stats();
+        $albumsStats = $albumModel->stats();
+        $usersStats = $userModel->stats();
+
+        $view->render([
+            'errors' => $errors,
+            'reservationsStats' => $reservationsStats,
+            'albumsStats' => $albumsStats,
+            'usersStats' => $usersStats
         ]);
     }
 }

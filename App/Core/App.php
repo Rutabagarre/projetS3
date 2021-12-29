@@ -13,12 +13,15 @@ class App
         'admin' => ["controller" => "Admin", "method" => "adminVerif"],
         'addAlbum' => ["controller" => "Admin", "method" => "addAlbum"],
         'deleteAlbum' => ["controller" => "Admin", "method" => "deleteAlbum"],
-        'findAllUsers' => ["controller" => "Admin", "method" => "findAllUsers"],
+        'adminUsers' => ["controller" => "Admin", "method" => "adminUsers"],
+        'adminResas' => ["controller" => "Admin", "method" => "adminResas"],
+        'adminStats' => ["controller" => "Admin", "method" => "adminStats"],
 
-        'viewAlbum' => ["controller" => "Albums", "method" => "viewAlbum"],
-        'oneAlbum' => ["controller" => "Albums", "method" => "oneAlbum"],
+        'allAlbums' => ["controller" => "Albums", "method" => "allAlbums"],
+        'album' => ["controller" => "Albums", "method" => "album"],
         'playlist' => ["controller" => "Albums", "method" => "playlist"],
-        'panier' => ["controller" => "Albums", "method" => "panier"],
+
+        'panier' => ["controller" => "Reservations", "method" => "panier"],
     ];
 
     public function __construct() {

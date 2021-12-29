@@ -13,9 +13,9 @@ class Albums
     }
 
 
-    function viewAlbum($params)
+    function allAlbums($params)
     {
-        $view = new View('viewAlbum');
+        $view = new View('allAlbums');
 
         $albumModel = new AlbumModel();
         $errors = [];
@@ -28,10 +28,10 @@ class Albums
         ]);
     }
 
-    function oneAlbum($params)
+    function album($params)
     {
-        $view = new View('oneAlbum');
-        $albumModel = new AlbumMOdel();
+        $view = new View('album');
+        $albumModel = new AlbumModel();
         $errors = [];
 
         if (!empty($_GET['album'])) {
@@ -54,25 +54,6 @@ class Albums
 
         $view->render([
 
-        ]);
-    }
-
-    function panier($params){
-        $view = new View('panier');
-        $albumModel = new AlbumMOdel();
-        $errors = [];
-
-        if (!empty($_GET['album'])) {
-            $num_album = $_GET['album'];
-
-            $album = $albumModel->find($num_album);
-        } else {
-            $errors['empty'] = 'Erreur';
-        }
-
-        $view->render([
-            'errors' => $errors,
-            'album' => $album
         ]);
     }
 }
