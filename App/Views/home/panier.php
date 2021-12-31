@@ -1,11 +1,14 @@
 <?php
 extract($data);
 
-if (!empty($errors)) {
-    foreach ($errors as $error){?>
-        <p><?= $error ?></p>
-    <?php }
-} ?>
+?>
+   <?php if (!empty($errors)) {?>
+       <div id="confirmation-reservation">
+    <?php foreach ($errors as $error){?>
+    <p><?= $error ?></p>
+    <?php }?>
+    </div>
+<?php } ?>
 <div id="panier-page">
     <div id="panier-page-title"><h1>Votre panier</h1></div>
     <div id="panier-page-resas">

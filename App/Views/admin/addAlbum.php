@@ -24,6 +24,6 @@
                 <input type="text" name="integration" id="integration">
             </div>
         </fieldset>
-        <input type="submit" value="Envoyer" id="add-album-page-envoyer">
+        <input type="submit" value="Ajouter" id="add-album-page-envoyer">
     </form>
 </div>
